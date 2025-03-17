@@ -62,14 +62,8 @@ warning() {
 }
 
 initRepo() {
-    if [ ! -d .repo ]; then
-        echo
-        echo "--> $INIT_MIKU_UI"
-        echo
         repo init -u https://github.com/Miku-UI/manifesto -b TDA --depth=1
-    fi
-
-    if [ -d .repo ] && [ ! -f .repo/local_manifests/miku-treble.xml ]; then
+        [ -d .repo ] && [ ! -f .repo/local_manifests/miku-treble.xml ]; then
         echo
         echo "--> $PREPARE_LOCAL_MANIFEST"
         echo
