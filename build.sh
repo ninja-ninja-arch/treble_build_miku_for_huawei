@@ -63,10 +63,6 @@ warning() {
 
 initRepo() {
         repo init -u https://github.com/Miku-UI/manifesto -b TDA --depth=1
-        [ -d .repo ] && [ ! -f .repo/local_manifests/miku-treble.xml ]; then
-        echo
-        echo "--> $PREPARE_LOCAL_MANIFEST"
-        echo
         rm -rf .repo/local_manifests
         mkdir -p .repo/local_manifests
         echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
